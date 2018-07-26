@@ -57,8 +57,37 @@ will
 - add *trace* effects at the beginning and the end of its lifespan.
 The video will be generated as before.
 
+### Example 3: a rectangle and a square (and geometric transformations)
+The video of this example is available
+[here](https://youtu.be/biB14icc3Ok).  
+To create the rectangle (with default dimensions) and rotate it by 45 degrees:
+```
+rectangle = Rectangle()
+rectangle.rotate(0.25*math.pi)
+```
+To create the square (with specified `width` and `height`) and place it (according to position specified in `anchor`):
+```
+square = Rectangle(anchor = (W/4, H/4), width = H/3, height = H/3)
+```
+To change its appearance (outline color, width of pen, and fill color):
+```
+square.set_pen_color(RED1)
+square.set_pen_width(3)
+square.set_brush_color(BANANA)
+square.close()
+```
+To synchronize the rectangle and the square:
+```
+rectangle.set_duration(5)
+square.move_after(rectangle, offset = -2)
+```
+To add effects:
+```rectangle.add_effects(Travel(stage = 'in'), Zoom(stage = 'out'))
+square.add_effects(Zoom(stage = 'in'), Fade(stage = 'out'))
+```
+
 ## Creating the video
-To create the videos, corresponding to Example 1 for example, type:
+To create the video corresponding to Example 1 for example:
 ```
 camera = Camera(text, equation)
 camera.roll()
@@ -99,7 +128,7 @@ In addition to `roll` already seen above,
 the class `Camera` has the method `timeline`,
 which opens up a `Tkinter` window 
 with the timeline of the graphical elements "uploaded" to the camera.
-For Example 2 above, it will look like 
+For Example 3 above, it will look like 
 ![this](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-timeline.png)
 
 # Features
