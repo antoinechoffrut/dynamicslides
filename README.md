@@ -106,7 +106,7 @@ an empty frame (one without any element in it) takes about
 - **0.15 seconds** to convert each `.png` image to `.jpg`.
 This is because it takes quite a bit of time to store an image to memory and to retrieve it.
 Creating the elements themselves does not take very long (relatively speaking).
-For examples, for the video [*"Nash's twist and the lazy cyclist"*]() (2 minutes and 10 seconds)
+For examples, for the video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM) (2 minutes and 10 seconds)
 it takes about **17 seconds** to generate all of the graphical elements.
 For comparison, creating the image files and the video from them takes on the order of **40 minutes**.
 
@@ -128,8 +128,12 @@ In addition to `roll` already seen above,
 the class `Camera` has the method `timeline`,
 which opens up a `Tkinter` window 
 with the timeline of the graphical elements "uploaded" to the camera.
-For Example 3 above, it will look like 
-![this](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-timeline.png)
+For Example 3 above, it will look like the image below.
+
+![timeline for Example 3 with a rectangle and a square](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-rectangles-timeline.png)
+
+The times of existence for the graphical elements (`rectangle` and `square`) are indicated in blue line segments,
+with red line segments superimposed to indicate the time of existence of the effects attached to them.
 
 # Features
 ## Synchronization
