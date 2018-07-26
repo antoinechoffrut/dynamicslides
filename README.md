@@ -99,8 +99,8 @@ In addition to `roll` already seen above,
 the class `Camera` has the method `timeline`,
 which opens up a `Tkinter` window 
 with the timeline of the graphical elements "uploaded" to the camera.
-For Example 2 above, it will look like the image belo.
-
+For Example 2 above, it will look like 
+![this](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-timeline.png)
 
 # Features
 ## Synchronization
