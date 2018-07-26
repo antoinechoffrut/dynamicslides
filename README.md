@@ -134,6 +134,9 @@ For Example 3 above, it will look like the image below.
 
 The times of existence for the graphical elements (`rectangle` and `square`) are indicated in blue line segments,
 with red line segments superimposed to indicate the time of existence of the effects attached to them.
+Here, 
+- `rectangle` appears between 0 seconds and 5 seconds), with effects between 0 seconds and 1 seconds on the one hand, and another between 4 seconds and 5 seconds;
+- `square` appears between 3 seconds and 6 seconds), with effects between 3 seconds and 4 seconds on the one hand, and another between 5 seconds and 6 seconds.
 
 # Features
 ## Synchronization
