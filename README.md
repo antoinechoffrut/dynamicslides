@@ -28,7 +28,7 @@ Within about four months I went from `print('hello world')` to a pretty reasonab
 
 # Usage
 ## Creating elements: text and graphics
-### Example 1: text followed by an equation
+### Example 1: text followed by equation
 The video of this example is available [here](https://www.youtube.com/watch?v=XoPexCjKsY8).  
 The following
 ```
@@ -41,7 +41,7 @@ creates a text element (*"Euler's identity"*) which will appear for three second
 followed by another text element with the corresponding equation (also three seconds).
 Both text elements have *fade in* and *fade out* effects.
 
-### Example 2: a broken line with an arrow
+### Example 2: tracing an arrow along a broken line
 The video of this example is available [here](https://youtu.be/3XZ6AfuRnJY).  
 The following
 ```
@@ -55,7 +55,6 @@ will
 - add an arrow at the tip,
 - set the color to red (RGB code = `(255, 0, 0)`), and
 - add *trace* effects at the beginning and the end of its lifespan.
-The video will be generated as before.
 
 ### Example 3: a rectangle and a square (and geometric transformations)
 The video of this example is available
@@ -138,6 +137,16 @@ Here,
 - `rectangle` appears between 0 seconds and 5 seconds), with effects between 0 seconds and 1 seconds on the one hand, and another between 4 seconds and 5 seconds;
 - `square` appears between 3 seconds and 6 seconds), with effects between 3 seconds and 4 seconds on the one hand, and another between 5 seconds and 6 seconds.
 
+# Libraries and external applications
+For the purpose of learning Python, I have **deliberately** chosen to program using the minimal set of packages.
+The most relevant are as follows.
+- `numpy` and `math` for basic mathematics;
+- `Tkinter` for `Canvas` and `Tk`;
+- the `Image` module from `PIL`; 
+- `aggdraw`, a high-quality graphics engine for `PIL`.
+
+# Manipulating text as `SVG`'s
+
 # Features
 ## Synchronization
 *To do...*
@@ -145,6 +154,4 @@ Here,
 *To do...*
 ## Streamlining the workflow
 ### Sketching the elements
-*To do...*
-### Drawing a timeline
 *To do...*
