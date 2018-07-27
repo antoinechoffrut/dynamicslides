@@ -172,13 +172,18 @@ The most relevant are as follows.
 - the `Image` module from `PIL`; 
 - `aggdraw`, a high-quality graphics engine for `PIL`.
 
-# Manipulating text as `SVG`'s
+In addition to these `Python` packages, 
+the program *invokes* the following external applications:
+- `LATEX` to create the text elements;
+- `convert` to convert `.png` files (created by `PIL`'s `Image` module) to `.jpg` files; and
+- `ffmpeg` to generate the video in `.mp4` format from the `.jpg` image files.
+
+# Text as `SVG`'s
+All text elements are generated with `LATEX`.
+This results in a `.dvi` file.
 
 # Features
 ## Synchronization
 *To do...*
 ## Geometric transformations
-*To do...*
-## Streamlining the workflow
-### Sketching the elements
 *To do...*
