@@ -149,7 +149,19 @@ Here,
 - `square` appears between 3 seconds and 6 seconds), with effects between 3 seconds and 4 seconds on the one hand, and another between 5 seconds and 6 seconds.
 
 ### Sketch
-The class `Camera` also has a method `sketch` which 
+There is a class `Sketch` for a quick sketch of a selected list of graphical objects.
+For Example 3 above,
+```
+root = Tkinter.Tk()
+sketch = Sketch(root)
+sketch.add_graphics(rectangle, square)
+sketch.refresh()
+```
+produces an image as below.
+![sketch for Example 3 with a rectangle and a square](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-rectangles-sketch.png)
+Note that it only draws the contour of the elements, and does not fill them in.
+This feature is only meant as a rudimentary tool for a quick check that the objects created look as they are meant to
+and are placed correctly.
 
 
 # Libraries and external applications
