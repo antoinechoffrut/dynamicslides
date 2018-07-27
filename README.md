@@ -2,14 +2,14 @@
 The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM)
 gives an idea of what `dynamicslides` is designed to do.
 
-In other words, it creates dynamic slide presentations,
+It creates dynamic slide presentations,
 i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature is this project is that it allows to incorporate
 text generated with LATEX, in particular elegant mathematical equations.
 
 
-This `README.md` explains how to use the program
+This `README` file explains how to use the program
 and a little bit on how it is structured and how it works.
 
 # Genesis of this project
