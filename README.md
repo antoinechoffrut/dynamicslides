@@ -1,7 +1,6 @@
 # What is `dynamicslides`?  
 The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM),
-<>from my youtube channel [100-second mathematics](https://www.youtube.com/channel/UCmFg_nmPhu2Uvy5y4XfnnYA),
-gives an idea of what `dynamicslides` can do.
+gives an idea of what `dynamicslides` can is designed to do.
 
 The project `dynamicslides` is a tool to create videos with animated text and graphics.
 These can be thought of as dynamic slide presentations.
