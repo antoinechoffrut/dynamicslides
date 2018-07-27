@@ -1,5 +1,5 @@
 # What is `dynamicslides`?  
-The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM),
+The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM)
 gives an idea of what `dynamicslides` is designed to do.
 
 In other words, it creates dynamic slide presentations,
