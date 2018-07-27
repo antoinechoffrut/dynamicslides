@@ -1,33 +1,52 @@
 # What is `dynamicslides`?  
 The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM),
-gives an idea of what `dynamicslides` can is designed to do.
+gives an idea of what `dynamicslides` is designed to do.
 
-The project `dynamicslides` is a tool to create videos with animated text and graphics.
-These can be thought of as dynamic slide presentations.
+In other words, it creates dynamic slide presentations,
+i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature is this project is that it allows to incorporate
 text generated with LATEX, in particular elegant mathematical equations.
 
 
-
 This `README.md` explains how to use the program
-and how it is structured.
+and a little bit on how it is structured and how it works.
 
 # Genesis of this project
-Like most mathematicians working in academia, I use LATEX to type my articles as well as to create slide presentations (most people would use [Beamer](https://www.sharelatex.com/learn/Beamer)).  LATEX offers high quality typography, especially when it comes to mathematical equations, but not only.
+Like most mathematicians working in academia (and many other scientists and engineers),
+I use LATEX to type my articles as well as to create slide presentations
+([Beamer](https://www.sharelatex.com/learn/Beamer) is a very popular tool). 
+LATEX offers high quality typography, especially when it comes to mathematical equations, but not only.
 
-In recent years I had decided to create videos explaining my research.  This I started to do by incorporating slides (in pdf) of existing presentations I had already done into a video using Apple's iMovie (and added voice-over).  (The graphics were actually generated in [METAPOST](https://tug.org/metapost.html).)  The outcome was not bad and I have posted a few of these videos on my youtube channel ["100-second mathematics"](https://www.youtube.com/channel/UCmFg_nmPhu2Uvy5y4XfnnYA?view_as=subscriber).
+In recent years I had decided to create videos explaining my research.  This, I started to do by incorporating slides (in pdf) of existing presentations I had already done into a video using Apple's iMovie.
+(The graphics were actually generated in [METAPOST](https://tug.org/metapost.html).)
+The outcome was not bad and I have posted a few of these videos on my youtube channel ["100-second mathematics"](https://www.youtube.com/channel/UCmFg_nmPhu2Uvy5y4XfnnYA?view_as=subscriber).
 
-On ther other hand there was definitely room for improvement.  I am really fond of Grant Anderson's [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)'s videos and this was very much the looks of videos I wished I could create.  Eventually I read his [FAQ](http://www.3blue1brown.com/about/) page and learned that he creates his videos "from scratch" in Python.  
+On ther other hand there was definitely room for improvement.  I am really fond of Grant Anderson's [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)'s videos and this was very much the looks of videos I wished I could reproduce.  Eventually I read his [FAQ](http://www.3blue1brown.com/about/) page and learned that he creates his videos "from scratch" in Python.  
 
-Of course I knew about Python and had contemplated learning it if only out of curiosity.  Having no experience in Python nor in object-oriented programming, I was not able to use Grant Anderson's code which he posted on his GitHub account.  This is when I decided that I was going to create my own Python application.
+Of course I knew about Python and had contemplated learning it if only out of curiosity.
+Having no experience in Python nor in object-oriented programming, 
+I was not able to use Grant Anderson's code which he posted on his [GitHub repository](https://github.com/3b1b/manim).
+This is when I decided that I was going to create my own Python application.
 
 Just for the fun and challenge.
 
-Within about four months I went from `print('hello world')` to a pretty reasonably well structured programme which I can now use to create videos with simple yet elegant and somewhat sophisticated visual effects.  Certainly not of the quality of 3Blue1Brown videos, but on the other hand I wouldn't know how else to make those videos (and without paying...). Remember, one of the important features is the ability to incorporate mathematical equations generated from LATEX.  Also, paraphrasing Grant Anderson, one very appealing aspect of this project is that it is my own tool.  Furthermore, it gives me the freedom to implement any visual effect that I can think up, something that one cannot always do even with a very sophisticated software, precisely because it is limited to a fixed set of functionalities (which of course can potentially be combined in extremely elaborate ways).  Quite frankly, I simply wanted to take up the challenge of learning a new programming paradigm (object-oriented), a new programming language that has become one of go-to languages in industry, and to entirely design an application from scratch with a real and meaningful purpose.
+Within about four months I went from `print('hello world')` to a pretty reasonably well structured program
+which I can now use to create videos with simple yet elegant and somewhat sophisticated visual effects.
+Certainly not of the quality of 3Blue1Brown videos, 
+but on the other hand I wouldn't know how else to make those videos (and without paying...). 
+Remember, one of the important features is the ability to incorporate mathematical equations generated from LATEX.
+Also, paraphrasing Grant Anderson, one very appealing aspect of this project is that it is my own tool.
+Furthermore, it gives me the freedom to implement any visual effect that I can think up,
+something that one cannot always do even with a very sophisticated software,
+precisely because it is limited to a fixed set of functionalities
+(which of course can potentially be combined in extremely elaborate ways). 
+Quite frankly, I simply wanted to take up the challenge of learning a new programming paradigm (object-oriented),
+a new programming language that has become one of go-to languages in industry (Python),
+and to design an application entirely from scratch with a real and meaningful purpose.
 
 # Usage
-## Creating elements: text and graphics
+## Creating graphical elements
 ### Example 1: text followed by equation
 The video of this example is available [here](https://www.youtube.com/watch?v=XoPexCjKsY8).  
 The following
@@ -60,10 +79,10 @@ will
 The video of this example is available
 [here](https://youtu.be/biB14icc3Ok).  
 
-To create the rectangle (with default dimensions) and rotate it by 45 degrees:
+To create the rectangle (with default dimensions) and rotate it by 45 degrees (relative to its `anchor`, see below):
 ```
 rectangle = Rectangle()
-rectangle.rotate(0.25*math.pi)
+rectangle.rotate(0.25 * math.pi)
 ```
 
 To create the square (with specified `width` and `height`) and place it (according to position specified in `anchor`):
@@ -71,6 +90,7 @@ To create the square (with specified `width` and `height`) and place it (accordi
 square = Rectangle(anchor = (W/4, H/4), width = H/3, height = H/3)
 ```
 where `W` and `H` are the width and height of the image (set by default to 1980 and 1080 respectively).
+At initialization, `anchor` is the left-hand corner of the rectangle.
 
 To change its appearance (outline color, width of pen, and fill color):
 ```
@@ -85,6 +105,8 @@ To synchronize the rectangle and the square:
 rectangle.set_duration(5)
 square.move_after(rectangle, offset = -2)
 ```
+(Namely, this sets the life span of `rectangle` to 5 seconds (it preserves the begin time and extends the end time),
+and moves square along the time axis so that it begins 2 seconds before the end of `rectangle`.)
 
 To add effects:
 ```rectangle.add_effects(Travel(stage = 'in'), Zoom(stage = 'out'))
@@ -102,7 +124,7 @@ This will
 - convert the frames in `.jpg`;
 - invoke `ffmpeg` to generate the video in `.mp4` from the `.jpg` files.
 
-## Performance/Benchmark
+# Performance/Benchmark
 On my laptop (a MacBook Pro running on High Sierra, with a 2.5GHz Intel Core i7), for a resolution of  
 - **width = 1920 points**  
 - **height = 1080 points**
@@ -116,8 +138,7 @@ For examples, for the video [*"Nash's twist and the lazy cyclist"*](https://yout
 it takes about **17 seconds** to generate all of the graphical elements.
 For comparison, creating the image files and the video from them takes on the order of **40 minutes**.
 
-
-## Streamlining the workflow
+# Streamlining the workflow
 For simple examples, such as Example 1 and Example 2, the above code is sufficient.
 But for more complex videos, which last longer, and with a higher frame rate, 
 it very quickly becomes very tedious to work with just the type of tools that are illustrated above.
@@ -125,11 +146,18 @@ it very quickly becomes very tedious to work with just the type of tools that ar
 This means that it takes over 20 seconds to generate a video containing just a single object lasting 3 seconds.
 Making even small changes when there are just a couple of elements quickly starts to feel tedious.
 
-I have added two features to speed up the process of creating the videos.
+I have added a number of features to speed up the process of creating the videos.
 
-### Timeline
+## Synchronization
 I have found that the most delicate, and certainly time-consuming part of creating a video,
 is to **synchronize** the elements.
+There are a number of commands (i.e. methods) to facilitate this process:
+an element can be placed (along the time axis) 
+- by specifying its begin time, its end time, or its duration (such as `rectangle.set_duration(5)` seen above in Example 3); or
+- by shifting it by a time duration; or 
+- by shifting it match the times of existence of another element (such `square.move_after(rectangle, offset = -2)` as seen above in Example 3).
+
+## Timeline
 In addition to the class `Camera` which generates the `.mp4` file,
 there is a class `Sketch` which opens up a `Tkinter` window 
 with the timeline of a list of selected graphical elements.
@@ -149,7 +177,7 @@ Here,
 - `rectangle` appears between 0 seconds and 5 seconds), with effects between 0 seconds and 1 seconds on the one hand, and another between 4 seconds and 5 seconds;
 - `square` appears between 3 seconds and 6 seconds), with effects between 3 seconds and 4 seconds on the one hand, and another between 5 seconds and 6 seconds.
 
-### Sketch
+## Sketch
 There is a class `Sketch` for a quick sketch of a selected list of graphical objects.
 For Example 3 above,
 ```
@@ -163,6 +191,8 @@ produces an image as below.
 Note that it only draws the contour of the elements, and does not fill them in.
 This feature is only meant as a rudimentary tool for a quick check that the objects created look as they are meant to
 and are placed correctly.
+
+
 
 
 # Libraries and external applications
@@ -180,7 +210,8 @@ the program *invokes* the following external applications:
 - `convert` to convert `.png` files (created by `PIL`'s `Image` module) to `.jpg` files; and
 - `ffmpeg` to generate the video in `.mp4` format from the `.jpg` image files.
 
-# Curves
+# Some lower level details
+## Curves
 The most basic graphical element is a *curve*.
 Every curve is represented as a Bézier curve, and therefore encoded via:
 - **control points**, and
@@ -199,7 +230,7 @@ and in particular the standard affine transformations:
 - **homothety** (rescaling in the x- and y-direction).
 
 
-# On generating and manipulating text
+## On generating and manipulating text
 A text element is a collection of curves (as previously described) and is generated with `LATEX`.
 From a string,
 the program generates a `.tex` file, invokes `LATEX` to produce a `.dvi` file, 
@@ -209,11 +240,3 @@ Now that the text is represented as a collection of Bézier curves,
 it becomes easy to create visual affects by applying (mostly affine) geometric transformations on them.
 
 
-# Synchronization
-As alluded to earlier, 
-synchronization of the various elements can become extremely delicate.
-There are a number of commands (i.e. methods) to facilitate this process:
-an element can be placed (along the time axis) 
-- by specifying its begin time, its end time, or its duration (such as `rectangle.set_duration(5)` seen above in Example 3); or
-- by shifting it by a time duration; or 
-- by shifting it match the times of existence of another element (such `square.move_after(rectangle, offset = -2)` as seen above in Example 3).
