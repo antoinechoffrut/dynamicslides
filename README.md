@@ -198,8 +198,8 @@ and are placed correctly.
 # Libraries and external applications
 *For the purpose of learning Python*, I have **deliberately** chosen to use a minimal set of packages.
 Besides the usual packages (`math`, `os`, `system`, etc.), the most relevant are:
-- `numpy` and `math` for basic mathematics;
-- `Tkinter` for `Canvas` and `Tk`;
+- `numpy`;
+- `Tkinter`;
 - the `Image` module from `PIL`; 
 - `aggdraw`, a high-quality graphics engine for `PIL`.
 
