@@ -70,6 +70,7 @@ To create the square (with specified `width` and `height`) and place it (accordi
 ```
 square = Rectangle(anchor = (W/4, H/4), width = H/3, height = H/3)
 ```
+where `W` and `H` are the width and height of the image (set by default to 1980 and 1080 respectively).
 
 To change its appearance (outline color, width of pen, and fill color):
 ```
@@ -125,15 +126,20 @@ Making even small changes when there are just a couple of elements quickly start
 
 I have added two features to speed up the process of creating the videos.
 
-### Creating a timeline
+### Timeline
 I have found that the most delicate, and certainly time-consuming part of creating a video,
 is to **synchronize** the elements.
-In addition to `roll` already seen above,
-the class `Camera` has the method `timeline`,
-which opens up a `Tkinter` window 
-with the timeline of the graphical elements "uploaded" to the camera.
-For Example 3 above, it will look like the image below.
-
+In addition to the class `Camera` which generates the `.mp4` file,
+there is a class `Sketch` which opens up a `Tkinter` window 
+with the timeline of a list of selected graphical elements.
+For Example 3 above, 
+```
+root = Tkinter.Tk()
+timeline = Timeline(root)
+timeline.add_graphics(rectangle, square)
+timeline.refresh()
+```
+will result in an image as shown below.
 ![timeline for Example 3 with a rectangle and a square](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-rectangles-timeline.png)
 
 The times of existence for the graphical elements (`rectangle` and `square`) are indicated in blue line segments,
@@ -141,6 +147,10 @@ with red line segments superimposed to indicate the time of existence of the eff
 Here, 
 - `rectangle` appears between 0 seconds and 5 seconds), with effects between 0 seconds and 1 seconds on the one hand, and another between 4 seconds and 5 seconds;
 - `square` appears between 3 seconds and 6 seconds), with effects between 3 seconds and 4 seconds on the one hand, and another between 5 seconds and 6 seconds.
+
+### Sketch
+The class `Camera` also has a method `sketch` which 
+
 
 # Libraries and external applications
 For the purpose of learning Python, I have **deliberately** chosen to program using the minimal set of packages.
