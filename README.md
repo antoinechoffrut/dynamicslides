@@ -185,11 +185,13 @@ The most basic graphical element is a *curve*.
 Every curve is represented as a Bézier curve, and therefore encoded via:
 - **control points**, and
 - **commands**, such as `M`, `L`, `Q`, `S` and `C`.
-The coordinates of the control points in fact represented via
+
+The coordinates of the control points are in fact represented via
 - an `anchor`, which is a point on the canvas;
-- the coordinates of the control points, relative to the `anchor`.
+- the coordinates of the control points, *relative* to the `anchor`.
 The position of the `anchor` can be changed, and the coordinates of the control points,
-relative to the `anchor`, will automatically be upated (and the position of the curve will not change).
+relative to the `anchor`, will automatically be upated.
+This *does not* change the position of the curve on the canvas, only its representation.
 This choice of representation turns out to be very convenient when performing **geometric transformations**,
 and in particular the standard affine transformations:
 - **translation**;
@@ -208,4 +210,10 @@ it becomes easy to create visual affects by applying (mostly affine) geometric t
 
 
 # Synchronization
-*To do...*
+As alluded to earlier, 
+synchronization of the various elements can become extremely delicate.
+There are a number of commands (i.e. methods) to facilitate this process:
+an element can be placed (along the time axis) 
+- by specifying its begin time, its end time, or its duration (such as `rectangle.set_duration(5)` seen above in Example 3); or
+- by shifting it by a time duration; or 
+- by shifting it match the times of existence of another element (such `square.move_after(rectangle, offset = -2)` as seen above in Example 3).
