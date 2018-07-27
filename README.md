@@ -105,7 +105,7 @@ This will
 ## Performance/Benchmark
 On my laptop (a MacBook Pro running on High Sierra, with a 2.5GHz Intel Core i7), for a resolution of  
 - **width = 1920 points**  
-- **height = 1080 points**  
+- **height = 1080 points**
 an empty frame (one without any element in it) takes about
 - **0.17 seconds** to generate a `.png` image and
 - **0.15 seconds** to convert each `.png` image to `.jpg`.
