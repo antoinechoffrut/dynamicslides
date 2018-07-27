@@ -179,13 +179,32 @@ the program *invokes* the following external applications:
 - `convert` to convert `.png` files (created by `PIL`'s `Image` module) to `.jpg` files; and
 - `ffmpeg` to generate the video in `.mp4` format from the `.jpg` image files.
 
-# On generating and manipulating
+# Curves
+The most basic graphical element is a *curve*.
+Every curve is represented as a Bézier curve, and therefore encoded via:
+- **control points**, and
+- **commands**, such as `M`, `L`, `Q`, `S` and `C`.
+The coordinates of the control points in fact represented via
+- an `anchor`, which is a point on the canvas;
+- the coordinates of the control points, relative to the `anchor`.
+The position of the `anchor` can be changed, and the coordinates of the control points,
+relative to the `anchor`, will automatically be upated (and the position of the curve will not change).
+This choice of representation turns out to be very convenient when performing **geometric transformations**,
+and in particular the standard affine transformations:
+- **translation**;
+- **rotation**;
+- **homothety** (rescaling in the x- and y-direction).
+
+
+# On generating and manipulating text
 All text elements are generated with `LATEX`.
 This results in a `.dvi` file, 
 which is then converted to a `.svg` file, with the `no fonts` option,
 resulting in Bézier curves (for most, though not all glyphs).
 Now that the text is represented as a collection of Bézier curves,
 it becomes easy to create visual affects by applying (mostly affine) geometric transformations on them.
+
+A text element is therefore a collection of (Bézier) curves and are drawn just like any other curves.
 
 # Features
 ## Synchronization
