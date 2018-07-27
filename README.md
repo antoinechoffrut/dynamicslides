@@ -166,8 +166,8 @@ and are placed correctly.
 
 
 # Libraries and external applications
-For the purpose of learning Python, I have **deliberately** chosen to program using the minimal set of packages.
-The most relevant are as follows.
+*For the purpose of learning Python*, I have **deliberately** chosen to use a minimal set of packages.
+Besides the usual packages (`math`, `os`, `system`, etc.), the most relevant are:
 - `numpy` and `math` for basic mathematics;
 - `Tkinter` for `Canvas` and `Tk`;
 - the `Image` module from `PIL`; 
@@ -198,17 +198,14 @@ and in particular the standard affine transformations:
 
 
 # On generating and manipulating text
-All text elements are generated with `LATEX`.
-This results in a `.dvi` file, 
+A text element is a collection of curves (as previously described) and is generated with `LATEX`.
+From a string,
+the program generates a `.tex` file, invokes `LATEX` to produce a `.dvi` file, 
 which is then converted to a `.svg` file, with the `no fonts` option,
 resulting in Bézier curves (for most, though not all glyphs).
 Now that the text is represented as a collection of Bézier curves,
 it becomes easy to create visual affects by applying (mostly affine) geometric transformations on them.
 
-A text element is therefore a collection of (Bézier) curves and are drawn just like any other curves.
 
-# Features
-## Synchronization
-*To do...*
-## Geometric transformations
+# Synchronization
 *To do...*
