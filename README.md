@@ -26,7 +26,7 @@ On ther other hand there was definitely room for improvement.  I am really fond 
 
 Of course I knew about Python and had contemplated learning it if only out of curiosity.
 Having no experience in Python nor in object-oriented programming, 
-I was not able to use Grant Anderson's code which he posted on his [GitHub repository](https://github.com/3b1b/manim).
+I was not able to use Grant Anderson's code which he posted on [his GitHub repository](https://github.com/3b1b/manim).
 This is when I decided that I was going to create my own Python application.
 
 Just for the fun and challenge.
