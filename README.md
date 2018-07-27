@@ -175,12 +175,17 @@ The most relevant are as follows.
 In addition to these `Python` packages, 
 the program *invokes* the following external applications:
 - `LATEX` to create the text elements;
+- `dvisvgm` to convert `.dvi` files to `.svg` files;
 - `convert` to convert `.png` files (created by `PIL`'s `Image` module) to `.jpg` files; and
 - `ffmpeg` to generate the video in `.mp4` format from the `.jpg` image files.
 
-# Text as `SVG`'s
+# On generating and manipulating
 All text elements are generated with `LATEX`.
-This results in a `.dvi` file.
+This results in a `.dvi` file, 
+which is then converted to a `.svg` file, with the `no fonts` option,
+resulting in Bézier curves (for most, though not all glyphs).
+Now that the text is represented as a collection of Bézier curves,
+it becomes easy to create visual affects by applying (mostly affine) geometric transformations on them.
 
 # Features
 ## Synchronization
