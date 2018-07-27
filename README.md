@@ -59,27 +59,32 @@ will
 ### Example 3: a rectangle and a square (and geometric transformations)
 The video of this example is available
 [here](https://youtu.be/biB14icc3Ok).  
+
 To create the rectangle (with default dimensions) and rotate it by 45 degrees:
 ```
 rectangle = Rectangle()
 rectangle.rotate(0.25*math.pi)
 ```
+
 To create the square (with specified `width` and `height`) and place it (according to position specified in `anchor`):
 ```
 square = Rectangle(anchor = (W/4, H/4), width = H/3, height = H/3)
 ```
+
 To change its appearance (outline color, width of pen, and fill color):
 ```
-square.set_pen_color(RED1)
+square.set_pen_color((255, 0, 0)
 square.set_pen_width(3)
-square.set_brush_color(BANANA)
+square.set_brush_color((227, 207, 87))
 square.close()
 ```
+
 To synchronize the rectangle and the square:
 ```
 rectangle.set_duration(5)
 square.move_after(rectangle, offset = -2)
 ```
+
 To add effects:
 ```rectangle.add_effects(Travel(stage = 'in'), Zoom(stage = 'out'))
 square.add_effects(Zoom(stage = 'in'), Fade(stage = 'out'))
