@@ -6,13 +6,13 @@ It creates dynamic slide presentations,
 i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature is this project is that it allows to incorporate
-text generated with LATEX, in particular elegant mathematical equations.
+text generated with LATEX, in pnarticular elegant mathematical equations.
 
 
 This `README` file explains how to use the program
 and a little bit on how it is structured and how it works.
 
-# Genesis of this project
+# Genesis of `dynamicslides`
 Like most mathematicians working in academia (and many other scientists and engineers),
 I use LATEX to type my articles as well as to create slide presentations
 ([Beamer](https://www.sharelatex.com/learn/Beamer) is a very popular tool). 
