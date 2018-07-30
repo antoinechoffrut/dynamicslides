@@ -1,8 +1,9 @@
 # What is `dynamicslides`?  
 The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM)
 gives an idea of what `dynamicslides` is designed to do.
+Also, short demos are available on the youtube channel ["Dynamic Slides"](https://www.youtube.com/channel/UCKR9rJ7grCSHdZYClZ1pUUg?view_as=subscriber).
 
-It creates dynamic slide presentations,
+`dynamicslides` creates dynamic slide presentations,
 i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature is this project is that it allows to incorporate
@@ -48,7 +49,7 @@ and to design an application entirely from scratch with a real and meaningful pu
 # Usage
 ## Creating graphical elements
 ### Example 1: text followed by equation
-The video of this example is available [here](https://www.youtube.com/watch?v=XoPexCjKsY8).  
+The video of this example is available [here](https://youtu.be/LJA0y4LA13c).  
 The following
 ```
 text = TexObject("Euler's identity")
@@ -61,7 +62,7 @@ followed by another text element with the corresponding equation (also three sec
 Both text elements have *fade in* and *fade out* effects.
 
 ### Example 2: tracing an arrow along a broken line
-The video of this example is available [here](https://youtu.be/3XZ6AfuRnJY).  
+The video of this example is available [here](https://youtu.be/-Apm-Mdnzgc).  
 The following
 ```
 polyline = Polyline((300, 300, 500, 500, 700, 400, 900, 600, 1100, 500, 1300, 700, 1500, 600, 1700, 800, 1900, 300))
@@ -77,7 +78,7 @@ will
 
 ### Example 3: a rectangle and a square (and geometric transformations)
 The video of this example is available
-[here](https://youtu.be/biB14icc3Ok).  
+[here](https://youtu.be/nne6cCjHAyo).  
 
 To create the rectangle (with default dimensions) and rotate it by 45 degrees (relative to its `anchor`, see below):
 ```
