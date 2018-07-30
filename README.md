@@ -90,7 +90,7 @@ To create the square (with specified `width` and `height`) and place it (accordi
 ```
 square = Rectangle(anchor = (W/4, H/4), width = H/3, height = H/3)
 ```
-where `W` and `H` are the width and height of the image (set by default to 1980 and 1080 respectively).
+where `W` and `H` are the width and height of the image (set by default to 1920 and 1080 respectively).
 At initialization, `anchor` is the left-hand corner of the rectangle.
 
 To change its appearance (outline color, width of pen, and fill color):
