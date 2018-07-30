@@ -7,7 +7,7 @@ Also, short demos are available on the youtube channel ["Dynamic Slides"](https:
 i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature in this project is that it allows to incorporate
-text generated with LATEX, in pnarticular elegant mathematical equations.
+text generated with LATEX, in particular elegant mathematical equations.
 
 
 This `README` file explains how to use the program
