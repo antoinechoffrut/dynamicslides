@@ -46,10 +46,10 @@ a new programming language that has become one of go-to languages in industry (P
 and to design an application entirely from scratch with a real and meaningful purpose.
 
 # A few words about the code
-- **The code has not been tested thoroughly.**  It has worked well enough for my needs.
+- **The code has not been tested thoroughly.**  Thus far it has worked well enough for my needs.
 - **I have made no effort to document the code.**  This is only meant to be a personal projet, for fun and to learn object-oriented programming.
 
-I work on a mac running on **High Sierra**, and I wrote the code in **Python version 2.7.15**.  The packages are:
+I work on a mac running on **High Sierra**, and I wrote the code in **Python version 2.7.15**.  You will need to install the following Python packages:
 - `NumPy`
 - `PIL`
 - `Tkinter`
