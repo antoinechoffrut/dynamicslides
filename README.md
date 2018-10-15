@@ -207,7 +207,7 @@ sketch = Sketch(root)
 sketch.add_graphics(rectangle, square)
 sketch.refresh()
 ```
-produces an image as below.
+produces an image as below. 
 ![sketch for Example 3 with a rectangle and a square](https://github.com/antoinechoffrut/dynamicslides/blob/master/dynamicslides-example-rectangles-sketch.png)
 Note that it only draws the contour of the elements, and does not fill them in.
 This feature is only meant as a rudimentary tool for a quick check that the objects created look as they are meant to
