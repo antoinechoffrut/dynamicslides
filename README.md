@@ -1,19 +1,18 @@
-# What is `dynamicslides`?  
+# What is `DynamicSlides`?  
 The video [*"Nash's twist and the lazy cyclist"*](https://youtu.be/KgHTeqdkTPM)
 gives an idea of what `dynamicslides` is designed to do.
 Also, short demos are available on the youtube channel ["Dynamic Slides"](https://www.youtube.com/channel/UCKR9rJ7grCSHdZYClZ1pUUg?view_as=subscriber).
 
-`dynamicslides` creates dynamic slide presentations,
+`DynamicSlides` creates dynamic slide presentations,
 i.e. videos with animated text and graphics.
 There are of course several applications which already do this,
 but the important feature in this project is that it allows to incorporate
 text generated with LATEX, in particular elegant mathematical equations.
 
 
-This `README` file explains how to use the program
-and a little bit on how it is structured and how it works.
+This `README` file a little bit on how it is structured and how it works.
 
-# Genesis of `dynamicslides`
+# Genesis of `DynamicSlides`
 Like most mathematicians working in academia (and many other scientists and engineers),
 I use LATEX to type my articles as well as to create slide presentations
 ([Beamer](https://www.sharelatex.com/learn/Beamer) is a very popular tool). 
@@ -46,7 +45,29 @@ Quite frankly, I simply wanted to take up the challenge of learning a new progra
 a new programming language that has become one of go-to languages in industry (Python),
 and to design an application entirely from scratch with a real and meaningful purpose.
 
+# A few words about the code
+- **The code has not been tested thoroughly.**  It has worked well enough for my needs.
+- **I have made no effort to document the code.**  This is only meant to be a personal projet, for fun and to learn object-oriented programming.
+
+My machine runs on **macOS High Sierra**.
+
+The code is in **Python version 2.7.15**.  The packages are:
+- `NumPy`
+- `PIL`
+- `Tkinter`
+- `aggdraw`
+
+You will also need:
+- `LaTeX`
+- `ffmpeg`
+- `ImageMagick`
+
+You can run `demo.py` for short example.
+
 # Usage
+**WARNING** I am in the process of refactoring the code of `DynamicSlides`.  The syntax shown below is *not* that of the code which is on this repository.  The new syntax will be easier to use and more flexible.
+
+
 ## Creating graphical elements
 ### Example 1: text followed by equation
 The video of this example is available [here](https://youtu.be/LJA0y4LA13c).  
