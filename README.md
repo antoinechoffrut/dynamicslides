@@ -49,9 +49,7 @@ and to design an application entirely from scratch with a real and meaningful pu
 - **The code has not been tested thoroughly.**  It has worked well enough for my needs.
 - **I have made no effort to document the code.**  This is only meant to be a personal projet, for fun and to learn object-oriented programming.
 
-My machine runs on **macOS High Sierra**.
-
-The code is in **Python version 2.7.15**.  The packages are:
+I work on a mac running on **High Sierra**, and I wrote the code in **Python version 2.7.15**.  The packages are:
 - `NumPy`
 - `PIL`
 - `Tkinter`
@@ -59,10 +57,11 @@ The code is in **Python version 2.7.15**.  The packages are:
 
 You will also need:
 - `LaTeX`
+- `dvisvgm`
 - `ffmpeg`
 - `ImageMagick`
 
-You can run `demo.py` for short example.
+You can run `demo.py` for a short example.  It will create a **8-second video**.  The frame rate is set in `constants.py`.  The program takes roughly one minute for a rate of **24pfs**.  The program will generate the frames (in `.png`) in a subfolder `ARCHIVES`; convert them to `.jpg`, generate the movide with `ffmpeg` from the `.jpg` files, then delete the `.jpg` files.  It will also display a `timeline` of the video and a `sketch` (see below for further explanations). 
 
 # Usage
 **WARNING** I am in the process of refactoring the code of `DynamicSlides`.  The syntax shown below is *not* that of the code which is on this repository.  The new syntax will be easier to use and more flexible.
